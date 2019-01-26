@@ -21,7 +21,7 @@ def _validate_query_params(params, valid_params, route_type):
 
 def get_subfield(_dict, field, subField):
     """checks to see if a field in a dictionary exists, if it does, `.get` a specified subfield"""
-    if _dict[field] is not None:
+    if _dict.get(field, None) is not None:
         return _dict[field].get(subField, '')
     return ''
 
